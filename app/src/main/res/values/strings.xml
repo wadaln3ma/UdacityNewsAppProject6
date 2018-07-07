@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UdacityNewsApp</string>
+    <string name="no_stories">No Stories Found</string>
+    <string name="no_internet_connection">No Intenet Connection</string>
+    <string name="published">Published at:</string>
+    <string name="unknown">Unknown</string>
+</resources>
