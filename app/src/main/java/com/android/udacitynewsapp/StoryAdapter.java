@@ -16,7 +16,7 @@ public class StoryAdapter extends ArrayAdapter<Story> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if (convertView ==null){
+        if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
@@ -25,12 +25,8 @@ public class StoryAdapter extends ArrayAdapter<Story> {
         TextView titleView = convertView.findViewById(R.id.title_text_view);
         titleView.setText(currentStory.getmStoryTitle());
 
-        TextView authorView = convertView.findViewById(R.id.author_text_view);
-        String author = currentStory.getmStoryAuthor();
-        if (author == "null"){
-            author = getContext().getString(R.string.unknown);
-        }
-        authorView.setText("Author: "+author);
+        TextView sectionView = convertView.findViewById(R.id.section_text_view);
+        sectionView.setText(getContext().getString(R.string.section) + " " + currentStory.getmStorySection());
 
         TextView dateView = convertView.findViewById(R.id.date_text_view);
         dateView.setText(getContext().getString(R.string.published) + " " + formattedDate(currentStory.getmStoryDate()));
@@ -38,7 +34,7 @@ public class StoryAdapter extends ArrayAdapter<Story> {
         return convertView;
     }
 
-    private String formattedDate(String date){
+    private String formattedDate(String date) {
         return date.split("T")[0];
     }
 

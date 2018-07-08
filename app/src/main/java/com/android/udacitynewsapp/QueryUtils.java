@@ -115,20 +115,21 @@ public final class QueryUtils {
         try {
 
             JSONObject baseJsonResponse = new JSONObject(storyJSON);
-            JSONArray storyArray = baseJsonResponse.getJSONArray("articles");
+            JSONObject articles = baseJsonResponse.getJSONObject("response");
+            JSONArray storyArray = articles.getJSONArray("results");
 
             for (int i = 0; i < storyArray.length(); i++) {
                 JSONObject currentStory = storyArray.getJSONObject(i);
 
-                String title = currentStory.getString("title");
+                String title = currentStory.getString("webTitle");
 
-                String author = currentStory.getString("author");
+                String sectionName = currentStory.getString("sectionName");
 
-                String date = currentStory.getString("publishedAt");
+                String date = currentStory.getString("webPublicationDate");
 
-                String url = currentStory.getString("url");
+                String url = currentStory.getString("webUrl");
 
-                Story story = new Story(title, author, date, url);
+                Story story = new Story(title, sectionName, date, url);
 
                 stories.add(story);
             }

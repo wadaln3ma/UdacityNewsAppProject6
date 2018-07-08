@@ -19,7 +19,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Story>> {
     private static final String BBC_REQUEST_URL =
-            "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=f7ca24c0067f4943be083a90c7d8ca62";
+            "https://content.guardianapis.com/search?api-key=2e487144-42cf-4a94-b760-399cadc20c2c";
 
     private static final int STOORY_LOADER_ID = 1;
 

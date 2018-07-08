@@ -2,13 +2,13 @@ package com.android.udacitynewsapp;
 
 public class Story {
     private String mStoryTitle;
-    private String mStoryAuthor;
+    private String mStorySection;
     private String mStoryDate;
     private String mUrl;
 
     public Story(String mStoryTitle, String mStoryAuthor, String mStoryDate, String mURL) {
         this.mStoryTitle = mStoryTitle;
-        this.mStoryAuthor = mStoryAuthor;
+        this.mStorySection = mStoryAuthor;
         this.mStoryDate = mStoryDate;
         this.mUrl = mURL;
     }
@@ -17,8 +17,8 @@ public class Story {
         return mStoryTitle;
     }
 
-    public String getmStoryAuthor() {
-        return mStoryAuthor;
+    public String getmStorySection() {
+        return mStorySection;
     }
 
     public String getmStoryDate() {
