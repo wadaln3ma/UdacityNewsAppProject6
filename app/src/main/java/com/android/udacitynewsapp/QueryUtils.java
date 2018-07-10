@@ -125,11 +125,25 @@ public final class QueryUtils {
 
                 String sectionName = currentStory.optString("sectionName");
 
+                JSONObject tags = currentStory.getJSONArray("tags").getJSONObject(0);
+
+                String authorFirstName = tags.optString("firstName");
+
+                String authorLastName = tags.optString("lastName");
+
+                String authorName;
+
+                if (authorFirstName == null && authorLastName == null){
+                    authorName = "Unknown";
+                }else {
+                    authorName = authorLastName + " " + authorFirstName;
+                }
+
                 String date = currentStory.optString("webPublicationDate");
 
                 String url = currentStory.optString("webUrl");
 
-                Story story = new Story(title, sectionName, date, url);
+                Story story = new Story(title, sectionName,authorName, date, url);
 
                 stories.add(story);
             }

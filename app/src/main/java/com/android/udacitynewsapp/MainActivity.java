@@ -20,7 +20,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Story>> {
     private static String apiKey = BuildConfig.THE_GUARDIAN_API_KEY;
     private static final String BBC_REQUEST_URL =
-            "https://content.guardianapis.com/search?api-key=" + apiKey;
+            "https://content.guardianapis.com/search?&show-tags=contributor&api-key=" + apiKey;
 
     private static final int STOORY_LOADER_ID = 1;
 
