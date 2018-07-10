@@ -68,7 +68,7 @@ public final class QueryUtils {
 
             // If the request was successful (response code 200),
             // then read the input stream and parse the response.
-            if (urlConnection.getResponseCode() == 200) {
+            if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
             } else {
@@ -121,13 +121,13 @@ public final class QueryUtils {
             for (int i = 0; i < storyArray.length(); i++) {
                 JSONObject currentStory = storyArray.getJSONObject(i);
 
-                String title = currentStory.getString("webTitle");
+                String title = currentStory.optString("webTitle");
 
-                String sectionName = currentStory.getString("sectionName");
+                String sectionName = currentStory.optString("sectionName");
 
-                String date = currentStory.getString("webPublicationDate");
+                String date = currentStory.optString("webPublicationDate");
 
-                String url = currentStory.getString("webUrl");
+                String url = currentStory.optString("webUrl");
 
                 Story story = new Story(title, sectionName, date, url);
 

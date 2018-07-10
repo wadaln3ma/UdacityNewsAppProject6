@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">UdacityNewsApp</string>
     <string name="no_stories">No Stories Found</string>
-    <string name="no_internet_connection">No Intenet Connection</string>
+    <string name="no_internet_connection">No Intenet Connection\n Please make sure that you are connected to the internet and refresh the app to see the latest news</string>
     <string name="published">Published at:</string>
     <string name="section">Section:</string>
 </resources>

@@ -18,8 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Story>> {
+    private static String apiKey = BuildConfig.THE_GUARDIAN_API_KEY;
     private static final String BBC_REQUEST_URL =
-            "https://content.guardianapis.com/search?api-key=2e487144-42cf-4a94-b760-399cadc20c2c";
+            "https://content.guardianapis.com/search?api-key=" + apiKey;
 
     private static final int STOORY_LOADER_ID = 1;
 

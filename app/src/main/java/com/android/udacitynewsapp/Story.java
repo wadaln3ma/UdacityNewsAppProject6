@@ -6,11 +6,11 @@ public class Story {
     private String mStoryDate;
     private String mUrl;
 
-    public Story(String mStoryTitle, String mStoryAuthor, String mStoryDate, String mURL) {
+    public Story(String mStoryTitle, String mStorySection, String mStoryDate, String mUrl) {
         this.mStoryTitle = mStoryTitle;
-        this.mStorySection = mStoryAuthor;
+        this.mStorySection = mStorySection;
         this.mStoryDate = mStoryDate;
-        this.mUrl = mURL;
+        this.mUrl = mUrl;
     }
 
     public String getmStoryTitle() {
